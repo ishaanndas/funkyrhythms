@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Funky Rythms</title>
+</head>
+<body>
+
+<section id="cdplayer">
+    
+    <h1>Funky Rhythms</h1>
+    <p>Check out more funky rhythms on <a href="https://open.spotify.com/playlist/6fV5Y16gPR4GAVKU77e55n?si=cc2605ca57674955" target="blank">this playlist.</a></p>
+        <img src="images/cd.png" alt="music-cover" id="cover" class="rotate" />
+    
+    <div class="music-container">
+        <div class="music-info">
+            <h4 id="title">The Smiths - Pretty Girls Make Graves</h4>
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+        </div>
+    </div>
+        <audio src="/music/Za dużo chcesz.mp3" id="audio"></audio>
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+
+        
+    </div>
+</section>
+  <script src="script.js"></script> 
+</body>
+</html>

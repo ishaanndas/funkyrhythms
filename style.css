@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+body {
+    background: linear-gradient(45deg,#f8cdf8, #111111,#ec7d5b);
+    background-size: 600% 100%;
+    animation: gradient 8s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gradient {
+  0% {background-position: 0%}
+  100% {background-position: 100%}
+} 
+
+html  {
+    scroll-behavior: smooth;
+}
+
+#cdplayer {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#cdplayer h1 {
+    color: white;
+    font-family: 'Poller One', cursive;
+    font-size: 50px;
+    padding-bottom: 1vw;
+}
+
+#cdplayer p {
+  font-size: 24px;
+  font-family: 'DM Sans', sans-serif;
+  color: white;
+  padding-bottom: 1vw;
+}
+
+#cdplayer p a {
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+}
+
+
+/* #cdplayer img {
+    width: 35rem;
+    padding-bottom: 4vw;
+    animation: rotate 4s linear infinite;
+    animation-play-state: paused;
+    z-index: -3;
+}
+
+.music-container .play .cd img { 
+  animation-play-state: running;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+*/
+
+#cover {
+  /* border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;*/
+  height: 55vh;
+  width: 55vh;
+  z-index: -3;
+  animation: rotate 3s linear infinite; 
+
+  animation-play-state: paused;
+}
+
+#cover.play {
+  animation-play-state: running;
+}
+
+#cover {
+  border-radius: 100%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.music-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 491px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4vw;
+}
+
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .action-btn {
+    background-color: #ffffff;
+    border: 0;;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  .action-btn.action-btn-big {
+    background-color: #ffffff;
+    font-size: 30px;
+  }
+  
+  .action-btn:focus {
+    outline: 0;
+  }
+
+  .music-info {
+    background-color:#b4b4b4;
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: -1;
+    width: 491px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .music-container.play .music-info {
+    opacity: .9;
+    transform: translateY(-100%);
+  }
+
+  .music-info h4 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+
+  .progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: #000000;
+    border-radius: 5px;
+    height: 100%;
+    width: 50%;
+    transition: width 0.1s linear;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #cover {
+      height: 35vh;
+      width: 35vh;
+    }
+
+    #cdplayer h1 {
+      font-size: 20px;
+    }
+  
+  #cdplayer p {
+    font-size: 14px;
+    margin: 0 3vw;
+  }
+
+
+  }
+
+  
