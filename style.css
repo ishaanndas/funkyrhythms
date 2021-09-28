@@ -113,13 +113,14 @@ html  {
 .music-container {
     background-color: #ffffff;
     border-radius: 15px;
-    width: 491px;
+    max-width: 491px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin-top: 4vw;
+    width: 90vw;
 }
 
 
@@ -159,7 +160,8 @@ html  {
     transform: translateY(0%);
     transition: transform 0.3s ease-in, opacity 0.3s ease-in;
     z-index: -1;
-    width: 491px;
+    max-width: 491px;
+    width: 90vw;
     font-family: 'DM Sans', sans-serif;
   }
 
@@ -193,8 +195,8 @@ html  {
 
   @media only screen and (max-width: 600px) {
     #cover {
-      height: 35vh;
-      width: 35vh;
+      height: 40vh;
+      width: 40vh;
     }
 
     #cdplayer h1 {
@@ -203,9 +205,12 @@ html  {
   
   #cdplayer p {
     font-size: 14px;
-    margin: 0 3vw;
+    margin: 0 10vw;
   }
-
+  
+  #cover {
+    margin-bottom: 20vw;
+  }
 
   }
 
